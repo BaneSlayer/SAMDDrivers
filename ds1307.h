@@ -8,6 +8,8 @@
 
 #ifndef DS1206_H_
 #define DS1206_H_
+#define RTC_ADDRESS 0x68
+
 #include "i2c_master.h"
 
 typedef struct {
@@ -21,8 +23,8 @@ typedef struct {
 
 uint8_t bcd2bin(uint8_t);
 uint8_t bin2bcd(uint8_t);
-void ds1307_init(struct i2c_master_module*,uint16_t);
-void ds1307_adjust(struct i2c_master_module*,uint16_t,DateTime*);
-void ds1307_now(struct i2c_master_module*,uint16_t,DateTime*);
+void ds1307_init(struct i2c_master_module*);
+void ds1307_adjust(struct i2c_master_module*,DateTime*);
+void ds1307_now(struct i2c_master_module*,DateTime*);
 
 #endif /* DS1206_H_ */

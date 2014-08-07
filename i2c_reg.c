@@ -31,7 +31,7 @@ uint8_t I2CRegWrite(struct i2c_master_module* module,uint16_t deviceAddr,uint8_t
 	localBuff[1] = data;
 	packet.address = deviceAddr;
 	packet.data = localBuff;
-	packet.data_length = 1;
+	packet.data_length = 2;
 	packet.high_speed = false;
 	packet.hs_master_code = 0x0;
 	packet.ten_bit_address = false;
